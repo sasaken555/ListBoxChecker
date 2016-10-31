@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ListBox check</title>
+    <link rel="stylesheet" href="foundation.css" />
+    <script src="ListSelectCount.js"></script>
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>ListBox</h1>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="large-4 medium-4 columns">
+        <form action="#" method="post">
+          <select multiple size="15" name="empLst" onchange="check(this)">
+            <option value="emp1">社員1</option>
+            <option value="emp2">社員2</option>
+            <option value="emp3">社員3</option>
+            <option value="emp4">社員4</option>
+            <option value="emp5">社員5</option>
+            <option value="emp6">社員6</option>
+            <option value="emp7">社員7</option>
+            <option value="emp8">社員8</option>
+            <option value="emp9">社員9</option>
+            <option value="emp10">社員10</option>
+            <option value="emp11">社員11</option>
+            <option value="emp12">社員12</option>
+            <option value="emp13">社員13</option>
+            <option value="emp14">社員14</option>
+            <option value="emp15">社員15</option>
+            <option value="emp16">社員16</option>
+            <option value="emp17">社員17</option>
+            <option value="emp18">社員18</option>
+            <option value="emp19">社員19</option>
+            <option value="emp20">社員20</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="large-8 medium-8 columns">
+        <div class="callout alert">
+          <h5>*注意*</h5>
+          <ul>
+            <li>選択数は０～５です。</li>
+            <li>選択数が６以上になると選択が解除されます。</li>
+            <li>現在の選択数と選択行はconsoleに表示されています。</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
