@@ -1,0 +1,11 @@
+body {
+  margin-top: 20px;
+}
+
+button {
+  box-shadow: 0 0 10px #808080;
+}
+
+button[disabled] {
+  box-shadow: 0 0 1px #808080;
+}

@@ -1,8 +1,8 @@
 function check(obj) {
 
-  // arr<int>: 選択行
+  // arr: 選択行
   var arr = [];
-  // count<int>: 選択数
+  // count: 選択数
   var count = 0;
 
   // obj: select以下のHTML要素全て
@@ -15,9 +15,9 @@ function check(obj) {
     // selected: 要素が選択されているかをboolean型で返却
     if (opt[i].selected) {
       count++
+      // 選択行を格納
       arr.push(i+1);
     }
-    // 選択行を格納
 
     // console.log(opt[i]);
     // console.log(i + ": " + arr[i]);
@@ -26,19 +26,33 @@ function check(obj) {
   console.log("選択行" + arr);
 
   regulate(count, opt);
+  btnOnOff(count);
+
 }
 
+// 選択数を制限し、制限を超えたら警告を返す
 function regulate(num, optj) {
-  // 選択数を制限し、制限を超えたら警告を返す
   if(num > 5) {
-    // 選択状態を解除
+    // ５件以上なので選択状態を解除
     for(var j = 0; j < optj.length; j++) {
       optj[j].selected = false;
     }
     alert("ERROR!!\n５件を超えて選択することはできません。");
   }
   else {
-    // 何もしない
+    // 制限ないなので何もしない
     return;
+  }
+}
+
+// リストから項目選択済みかつ選択数が５件以内なら有効化
+function btnOnOff(num) {
+  if (num > 0 && num <= 5) {
+    // リストから選択されており、制限以内
+    document.getElementById("btn").disabled = false;
+  }
+  else {
+    // 未選択または選択制限数を超えた場合
+    document.getElementById("btn").disabled = true;
   }
 }
