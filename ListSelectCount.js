@@ -22,10 +22,10 @@ function check(obj) {
     // console.log(opt[i]);
     // console.log(i + ": " + arr[i]);
   }
-  console.log("選択数: " + count);
-  console.log("選択行" + arr);
 
+  // 選択制限
   regulate(count, opt);
+  // ボタン活性制御
   btnOnOff(count);
 
 }
@@ -38,6 +38,8 @@ function regulate(num, optj) {
       optj[j].selected = false;
     }
     alert("ERROR!!\n５件を超えて選択することはできません。");
+    // 一番上の要素を選択状態にする
+    optj.selectedIndex = 0;
   }
   else {
     // 制限ないなので何もしない
